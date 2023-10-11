@@ -4,7 +4,7 @@
 #define STUDENTS 5
 
 
-// 토큰 : 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
+
 
 // classifyStudents라는 함수를 선언 및 정의
 void classifyStudents(int scores[], char targetGrade) {
@@ -14,7 +14,7 @@ void classifyStudents(int scores[], char targetGrade) {
 
 	// 지역변수 grade 선언
 	char grade = ' ';
-	for (int i = 0; i < STUDENTS; i++) { 
+	for (int i = 0; i < STUDENTS; i++) {
 
 		// scores 값이 90이상이면 지역변수 grade에 A를 초기화
 		if (scores[i] >= 90) {
@@ -50,41 +50,59 @@ void classifyStudents(int scores[], char targetGrade) {
 
 // 매개변수가 scores인 함수 sumScores 선언 및 정의
 int sumScores(int scores[]) {
+
+	// 변수 sum 선언 및 초기화
+	int sum = 0;
 	for (int i = 0; i < STUDENTS; i++) {
-		// 변수 sum 선언 및 초기화
-		int sum = 0;
+
 		// scores안의 값을 모두 더해서 변수 sum에 정의
 		sum += scores[i];
-		
+
 	}
+	return sum;
 
 }
 
 // 매개변수가 socres인 함수 averageScores 선언 및 정의
 double averageScores(int scores[]) {
-	for (int i = 0; i < STUDENTS; i++) {
-		float average=0;
-		average = (average + scores[i])/5;
-	}
-	return;
+
+	// 변수 sum에 매개변수가 scores인 함수 sumScores를 대입
+	int sum = sumScores(scores);
+
+	// 변수 average 값 정의
+	double average = (double)sum / (double)STUDENTS;
+
+	return average;
+
 }
 
 // 매개변수가 socres인 함수 printRanks 선언 및 정의
 void printRanks(int scores[]) {
-	zasdg qaerhqrhaq5doiafuaispodfg hv; oias; gh/s ba
+
+	// 변수 ranks에 상수 STUDENTS 만큼 크기 할당
+	int ranks[STUDENTS];
+	for (int i = 0; i < STUDENTS; i++) {
+		ranks[i] = 1; //초기 순위를 1로 설정
+		for (int j = 0; j < STUDENTS; j++) {
+			if (scores[j] > scores[i]{
+				ranks[i]++; //더 큰 값이 있으면 순위가 증가
+				}
+		}
+		printf("%d 학생의 순위는 %d 입니다. /n", i, ranks[i]);
+	}
 }
 
 
 int main() {
 	int scores[STUDENTS];
 
-	for (int i = 0; i < STUDENTS; i++) {
-		printf("학생 %d의 성적을 입력하세요:", i + 1);
-		scanf_s("%d", &scores[i]);
-	}
+		for (int i = 0; i < STUDENTS; i++) {
+			printf("학생 %d의 성적을 입력하세요:", i + 1);
+			scanf_s("%d", &scores[i]);
+		}
 
 	// 공백 엔터값을 없앤다
-	char ch = getchar(); 
+	char ch = getchar();
 
 	char target;
 	printf("특정 점수 (A,B,C,D,F)를 입력하시오:");
@@ -105,6 +123,5 @@ int main() {
 
 	return 0;
 }
-
 
 	
