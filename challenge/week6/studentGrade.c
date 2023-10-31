@@ -84,7 +84,7 @@ void printRanks(int scores[]) {
 	for (int i = 0; i < STUDENTS; i++) {
 		ranks[i] = 1; //초기 순위를 1로 설정
 		for (int j = 0; j < STUDENTS; j++) {
-			if (scores[j] > scores[i]{
+			if (scores[j] > scores[i]){
 				ranks[i]++; //더 큰 값이 있으면 순위가 증가
 				}
 		}
