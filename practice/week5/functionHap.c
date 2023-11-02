@@ -2,7 +2,7 @@
 
 int hapf(int value); //함수 hapf를 선언함
 
-void main() 
+int main() 
 {
 	printf("1부터    10까지의 합은 %d\n", hapf(10)); //1부터 10까지의 합을 출력
 	printf("1부터  100까지의 합은 %d\n", hapf(100)); //1부터 100까지의 합을 출력

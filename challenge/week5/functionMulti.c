@@ -2,7 +2,7 @@
 
 long multiF(int value); //함수 multiF를 선언함
 
-void main()
+int main()
 {
 	printf("1부터 2까지의 곱은 %ld\n", multiF(2)); //1부터 2까지의 곱을 출력
 	printf("1부터 3까지의 곱은 %ld\n", multiF(3)); //1부터 3까지의 곱을 출력
